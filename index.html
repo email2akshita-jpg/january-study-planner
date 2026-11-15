@@ -79,7 +79,7 @@ html,body{background:#f3eafd!important;color:#24103f}
 @media(max-width:650px){.shell{background:#f3eafd}}
 
 </style>
-</head>
+<style>.planning-rules summary::-webkit-details-marker{color:#7d42b6}.planning-rules strong{color:#542080}.planning-rules .subtle{font-size:12px;line-height:1.5}</style>\n</head>
 <body>
 <div class="shell">
  <header class="topbar">
@@ -114,6 +114,7 @@ html,body{background:#f3eafd!important;color:#24103f}
    </section>
    <section class="panel calendar-panel">
     <div class="calendar-head"><div><h2>Arrange your calendar</h2><div class="subtle">Drag a study card onto another day, or edit its date.</div></div><div class="calendar-nav"><button class="btn small" id="undoChangeBtn" disabled title="Undo your last planner change">↶ Undo</button><button class="btn small" id="prevWeek">‹</button><button class="btn small" id="thisWeek">Today</button><button class="btn small" id="nextWeek">›</button></div></div>
+    <details class="planning-rules" open style="margin:0 0 14px;padding:12px 14px;border:1px solid #dfc9f3;border-radius:13px;background:#fbf7ff"><summary style="font-weight:800;cursor:pointer;color:#542080">✦ Current planning rules · updated 15 November</summary><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin-top:12px"><div><strong>Topic time estimates</strong><br><span class="subtle">Green: 90–120 min · Orange: 45–75 min · Red: 20–40 min. Complex green topics can take the full 2 hours.</span></div><div><strong>Learning method</strong><br><span class="subtle">Prioritise video and understanding first, then concise consolidation, retrieval and essential flashcards.</span></div><div><strong>Weekly capacity</strong><br><span class="subtle">Monday, Saturday and Sunday are main learning days. Tuesday–Friday are placement days, so plan short sessions only. Friday volleyball 17:30–19:00.</span></div><div><strong>Daily non-negotiable</strong><br><span class="subtle">Spranki first. Missed sessions move forward, not doubled up. Keep dance and recovery time in the plan.</span></div><div><strong>Homeostasis deadline</strong><br><span class="subtle">Aim for 1 December, with 8 December as the absolute latest finish date to protect revision time before 11 January.</span></div><div><strong>Research application</strong><br><span class="subtle">Start today with a 30–45 min admin block: find deadline, eligibility, form and required documents. Draft in later short blocks.</span></div></div></details>
     <div class="calendar-head"><strong id="weekLabel"></strong><div class="subtle">Week view</div></div>
     <div class="calendar-grid" id="calendarGrid"></div>
     <div class="week-tools"><div class="key"><span class="kg">Green</span><span class="ko">Orange</span><span class="kr">Red</span></div><div class="subtle">Tick a session on its original day, even if you completed it later · drag to reschedule</div></div>
@@ -190,8 +191,9 @@ const HOME = [
   {id:'h03',title:'Cirrhosis, ascites & MASLD',kind:'home',minutes:135,topics:[['Cirrhosis','green',true],['Ascites','green',false],['Metabolic dysfunction-associated steatotic liver disease (MASLD)','orange',true]],note:'MASLD is a GP syllabus addition. Compare causes of cirrhosis and complications of portal hypertension.'}]},
  {date:'2026-11-14',title:'Reflux & hernias',desc:'A useful anatomy and symptom-pattern comparison.',tasks:[
   {id:'h04',title:'GORD and abdominal/hiatus hernias',kind:'home',minutes:125,topics:[['Gastro-oesophageal reflux disease','green',true],['Hernias','green',false],['Hiatus hernia','red',true],['Barrett oesophagus','orange',true]],note:'Barrett oesophagus is the additional GP detail. Distinguish uncomplicated reflux from alarm features and complications.'}]},
- {date:'2026-11-15',title:'Bowel inflammation & infection',desc:'Separate inflammatory, infective and acute diarrhoeal presentations.',tasks:[
-  {id:'h05',title:'IBD and infective bowel disease',kind:'home',minutes:135,topics:[['Inflammatory bowel disease','green',true],['Infectious colitis','red',true],['Infectious diarrhoea','orange',true]],note:'Compare Crohn disease vs ulcerative colitis, infectious red flags, stool tests and escalation.'}]},
+ {date:'2026-11-15',title:'Reset, viral hepatitis & research application',desc:'Finish viral hepatitis with your study partner, then take a short first step on the research application. Keep time for your boyfriend and family.',tasks:[
+  {id:'h05',title:'IBD and infective bowel disease',kind:'home',minutes:135,topics:[['Inflammatory bowel disease','green',true],['Infectious colitis','red',true],['Infectious diarrhoea','orange',true]],note:'Compare Crohn disease vs ulcerative colitis, infectious red flags, stool tests and escalation.'},
+  {id:'research-start-1115',title:'Research project application · first step',kind:'custom',minutes:35,topics:[],note:'Find the application deadline, eligibility criteria, application form and required documents. Make a checklist; drafting can happen in a later short session.'}]},
  {date:'2026-11-16',title:'Malabsorption & deficiency',desc:'Connect intestinal pathology to nutritional and haematological consequences.',tasks:[
   {id:'h06',title:'Coeliac disease, malabsorption & B12/folate deficiency',kind:'home',minutes:135,topics:[['Coeliac disease','orange',true],['Malabsorption','orange',false],['Vitamin B12 and/or folate deficiency','orange',true]],note:'Include serology/biopsy, dietary management, neurological features and causes beyond coeliac disease.'}]},
  {date:'2026-11-17',title:'Functional & diverticular bowel disease',desc:'Compare common chronic bowel symptoms and identify red flags.',tasks:[
