@@ -179,7 +179,7 @@ html,body{background:#f3eafd!important;color:#24103f}
 <div class="modal-backdrop" id="modalBackdrop"><div class="modal"><div class="modal-head"><h3 id="modalTitle">Edit study session</h3><button class="x" id="closeModal">×</button></div><div id="modalBody"></div><div class="modal-actions" id="modalActions"></div></div></div>
 <div class="toast" id="toast"></div>
 <script>
-const TODAY = '2026-11-15';
+const TODAY = '2026-11-17';
 const EXAM = '2027-01-11';
 const HOME = [
  {date:'2026-11-11',title:'Pancreas & biliary pain',desc:'Start with the high-yield acute abdominal pain comparison. This is your day off, so use the longer study window.',tasks:[
@@ -220,7 +220,7 @@ const HOME = [
 ];
 
 const GP_ROTATIONS = [
- {date:'2026-12-08',title:'Homeostasis spaced-repetition checkpoint',desc:'Final Homeostasis coverage day includes a short cumulative retrieval block. Use remaining time for weak topics, not rereading everything.',tasks:[{id:'sr-1208',title:'Cumulative Homeostasis retrieval',kind:'review',minutes:30,topics:[],note:'Closed-book retrieval across completed GI, renal/urology, endocrine and haematology topics. Prioritise weak areas and exam-style clinical patterns.'}]},
+ {date:'2026-12-08',title:'Homeostasis spaced-repetition checkpoint',minutes:30,category:'Homeostasis retrieval',topics:['Cumulative Homeostasis retrieval'],desc:'Final Homeostasis coverage day includes a short cumulative retrieval block. Use remaining time for weak topics, not rereading everything.'},
  {date:'2026-12-09',title:'GP GI: remaining add-ons',minutes:100,category:'GI',topics:['Barrett oesophagus','H. pylori','Infectious diarrhoea','MASLD','Rectal prolapse','Pancreatic cancer','GI tract cancer','GI bleeding'],desc:'Most GI overlaps were covered in the Homeostasis sprint. Give extra time only to GP-only details and cancer/red-flag pathways.'},
  {date:'2026-12-10',title:'GP renal & endocrine add-ons',minutes:100,category:'Renal / Endocrine',topics:['Hypercalcaemia and hypocalcaemia','Hyperkalaemia and hypokalaemia','Hyponatraemia and hypernatraemia','Prediabetes','Hyperlipidaemia','Diabetic retinopathy','Obesity'],desc:'Use pattern recognition: ECG changes, symptoms, urgent treatment thresholds and screening/prevention.'},
  {date:'2026-12-11',title:'Other GP knowledge',minutes:90,category:'Other knowledge',topics:['Adverse drug effects','Disease prevention / screening','Iatrogenic conditions','Incidental findings','Medically unexplained symptoms / therapeutic consultation','Notifiable diseases','Vitamin D deficiency','Metastatic cancer'],desc:'Focus on how to consult, explain uncertainty, safety-net and arrange follow-up.'},
