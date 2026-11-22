@@ -305,7 +305,7 @@ function initialiseReviews(){
  if(state.reviewPlanVersion===2)return;
  homeTopicRecords().forEach(t=>{if(CONFIRMED_DONE_TOPICS.has(t.name)||state.topicDone[t.name]||isTopicDoneBySession(t.name))reviewSeed(t.name,isoToday());});
  ['Hepatitis','Alcoholic hepatitis'].forEach(n=>{if(state.reviewPlans[n])state.reviewPlans[n].due=isoToday();});
- if(state.reviewPlans['Constipation'])state.reviewPlans['Constipation'].due=dateAdd(isoToday(),1);
+ reviewSeed('Constipation',isoToday());state.reviewPlans['Constipation'].due=dateAdd(isoToday(),1);
  state.reviewPlanVersion=2;
  try{localStorage.setItem(stateKey,JSON.stringify(state))}catch(e){}
 }
