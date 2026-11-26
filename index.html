@@ -299,6 +299,9 @@ const GP_SOURCE_LEVELS=Object.assign(
  'H. pylori':'green',
  'Hiatus hernia':'green',
  'Infectious diarrhoea':'green',
+ // Source GP lists infectious diarrhoea (green); Homeostasis lists infectious colitis (red).
+ // These related infective-bowel presentations were explicitly tagged as an overlap.
+ 'Infectious colitis':'green',
  'Irritable bowel syndrome':'green',
  'Peptic ulcer disease and gastritis':'green',
  'Appendicitis':'orange',
@@ -357,7 +360,7 @@ function highestRequiredLevel(name,fallback='orange'){
 }
 function priorityExplanation(name){
  const h=HOME_SOURCE_LEVELS[name],g=GP_SOURCE_LEVELS[name];
- return [h?'Homeostasis: '+h.toUpperCase():null,g?'GP: '+g.toUpperCase():null].filter(Boolean).join(' · ');
+ return [h?'Homeostasis: '+h.toUpperCase():null,g?'GP: '+g.toUpperCase()+(name==='Infectious colitis'?' (infectious diarrhoea overlap)':''):null].filter(Boolean).join(' · ');
 }
 function effectiveTopics(t){return (t.topics||[]).map(x=>[x[0],highestRequiredLevel(x[0],x[1]),!!x[2]||!!(HOME_SOURCE_LEVELS[x[0]]&&GP_SOURCE_LEVELS[x[0]])]);}
 
